@@ -23,7 +23,7 @@
 
 (define-embedded-pillar-api "getQsrRegistrationCost")
 (define-embedded-pillar-api "checkNameAvailability" :args (name))
-(define-embedded-pillar-api "getAll" :args (page count) :type pillar :aggregate :array)
+(define-embedded-pillar-api "getAll" :args (page count) :type pillar :aggregate :list)
 (define-embedded-pillar-api "getByOwner" :args (owner-address) :type pillar :aggregate :array)
 (define-embedded-pillar-api "getByName" :args (name) :type pillar)
 (define-embedded-pillar-api "getDelegatedPillar" :args (owner-address) :type delegation-amount)

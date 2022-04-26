@@ -111,12 +111,13 @@ of type `CLASSNAME` (if `AGGREGATE` is NIL), or a `ZENON-API-LIST-RESULT` (for :
        (defun ,(intern (api-value-ctor-name classname))
 	   (data &key (aggregate nil))
 	 (labels ((single (ht)
-		    (let ((object (make-instance ',classname)))
-		      (set-slot-values object
-				       (slot-spec-cls-table ',slot-spec)
-				       ht
-				       ,package)
-		      object))
+		    (when ht
+		      (let ((object (make-instance ',classname)))
+			(set-slot-values object
+					 (slot-spec-cls-table ',slot-spec)
+					 ht
+					 ,package)
+			object)))
 		  (multiple (lst)
 		    (mapcar #'(lambda (entry) (single entry)) lst)))
 	   (case aggregate

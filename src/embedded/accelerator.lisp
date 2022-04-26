@@ -29,5 +29,4 @@
 (define-embedded-accelerator-api "getProjectById" :args (id) :type accelerator-project)
 (define-embedded-accelerator-api "getPhaseById" :args (id) :type project-phase)
 (define-embedded-accelerator-api "getVoteBreakdown" :args (id) :type votes)
-;; needs to test support for array args first
-;(define-embedded-accelerator-api "getPillarVotes" :args (name hashes) :type pillar-vote :aggregate :array)
+(define-embedded-accelerator-api "getPillarVotes" :args (name hashes) :type pillar-vote :aggregate :array)
