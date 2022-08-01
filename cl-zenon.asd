@@ -19,6 +19,7 @@
 		 (:file "embedded/plasma")
 		 (:file "embedded/sentinel")
 		 (:file "embedded/stake")
+		 (:file "embedded/spork")
 		 (:file "embedded/swap")
 		 (:file "embedded/token"))))
   :description "Zenon API bindings"
